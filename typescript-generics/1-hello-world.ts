@@ -1,6 +1,10 @@
 // Here is a very basic example of a typescript generic.
 // More info on the typescript docs: https://www.typescriptlang.org/docs/handbook/2/generics.html
 
+// Array generic
+
+type numArray = Array<number>;
+
 // Here is a function that returns the value it is passed
 // Without generics, it is restricted to only work with one type
 
@@ -51,3 +55,12 @@ const typedStringValue = returnTypedValue<string>('my string');
 // When we call our function, we are explicitely passing string as a type argument,
 // try removing that, and notice how typedStingValue is still of type string.
 // This is called type argument inferrence.
+
+// Generics can extetend other types
+// This is useful when you want to put constraints on the types that can be uysed as type variables
+
+function addFullName() {}
+
+// Next steps:
+// Look at generics in React with useState
+// Look at generics in libraries like react-from or react-graphql
